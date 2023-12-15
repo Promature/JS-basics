@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p class="title">Rock-Paper-Scissors</p>
+    <button class="move-button" onclick="
+    let compMove = getCompMove();
+    let result = getResult('Rock',compMove);
+    showPickedMoves('Rock',compMove);
+    // alert(`You selected Rock. Computer selected ${compMove}. ${result}.\nWin:${score.win}, Lose:${score.lose}, Tie:${score.tie}.`);
+    showScore();"
+    ><img src="Images/Rock-emoji.png" alt="" class="move-icon"></button>
+
+    <button class="move-button" onclick="
+    compMove = getCompMove();
+     result = getResult('Paper',compMove);
+     showPickedMoves('Paper',compMove);
+    // alert(`You selected Paper. Computer selected ${compMove}. ${result}.\nWin:${score.win}, Lose:${score.lose}, Tie:${score.tie}.`);
+    showScore();"><img src="Images/Paper-emoji.png" alt="" class="move-icon"></button>
+
+    <button class="move-button" onclick="
+    compMove = getCompMove();
+     result = getResult('Scissors',compMove);
+     showPickedMoves('Scissors',compMove);
+    /* alert(`You selected Scissor. Computer selected ${compMove}. ${result}.\nWin:${score.win}, Lose:${score.lose}, Tie:${score.tie}.`);*/
+    showScore();"
+    ><img src="Images/Scissors-emoji.png" alt="" class="move-icon"></button>
+
+    
+    <p class="js-pickedMoves"></p>
+    <p class="js-score"></p>
+    <button class="reset-button"onclick="
+    resetScore();
+    ">Reset Score</button>
+
+
+    <script src="scripts/rock-paper-scissors.js">
+        
+    </script>
+</body>
+</html>
